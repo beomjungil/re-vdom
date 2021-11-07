@@ -1,0 +1,22 @@
+{
+  "name": "re-vdom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^3.5.2",
+    "concurrently": "^6.3.0",
+    "esbuild": "^0.13.12",
+    "fs-extra": "^10.0.0",
+    "serve": "^13.0.2"
+  },
+  "scripts": {
+    "build": "node ./esbuild.build.js",
+    "start:serve": "serve ./dist -l 3000",
+    "start:watch": "node ./esbuild.watch.js",
+    "start": "concurrently \"npm:start:serve\" \"npm:start:watch\""
+  },
+  "dependencies": {
+    "typescript": "^4.4.4"
+  }
+}
